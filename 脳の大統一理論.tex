@@ -1,0 +1,37 @@
+\documentclass[a4paper, titlepage]{jsarticle}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{xcolor}
+
+\usepackage{hyperref}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{latexsym}
+\usepackage{enumitem}
+\usepackage{empheq}
+\usepackage{amsthm}
+\usepackage{bm}
+\usepackage{physics}
+
+\title{\Huge 参考図書「脳の大統一理論 ～自由エネルギー原理とは何か～」}
+\author{B4 砂川}
+
+\begin{document}
+
+\maketitle
+
+\section{知覚}
+\begin{itemize}
+    \item 脳はヘルムホルツの自由エネルギーを最小化するように推論を行う，ということに基づいているのが自由エネルギー原理．
+    \item 視覚認識における初期のモデルは，画像内の単純な特徴からより全体的で複雑な特徴を順々に検出することで，目的の対象を検知しようとした（On Intelligenceにもこんな手順で書かれてた，そっちは実際の人間の視覚認識として触れていたかも）．
+    \item ただしこの初期モデルは初期段階から最終段階への一方向に情報を流すので，対象の認識がうまくいかないことがある（誤差逆伝播法などの逆方向の情報の移動が必要，これもOn Intelligenceに記載あり）．
+    \item 初期モデルはボトムアップ処理だけであったのに対して，トップダウンとボトムアップの両方の処理をサイクルにして認識を行うモデルがある．
+    \item ex.)ナイサーの知覚サイクルモデル
+    \item 川人さんと乾さんの開発した視覚認識（二次元画像から三次元構造）のモデルでは，ボトムアップ処理によって網膜像から仮説となる三次元構造を推定し，次にトップダウン処理によって推定した構造から画像を生成して現実の網膜像との誤差を求め，その後差が小さくなるように仮説となる構造を変更する（誤差逆伝播法と同じ原理）．
+\end{itemize}
+
+\end{document}
