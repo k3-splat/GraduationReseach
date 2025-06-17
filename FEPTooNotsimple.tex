@@ -160,13 +160,51 @@
 \end{equation}
 \par
 疎な結合を持つ特定の分割の流れとヤコビアンの正規形式は、$\alpha = (a, \mu)$ および $\beta = (\eta, s)$ とすると、次のように表現できます：
-
+\begin{equation}
+    \begin{aligned}
+        f(x) &= \Omega\nabla\imaginary - \Lambda \\
+        \begin{bmatrix}
+            f_{\eta}(\eta, b) \\
+            f_{s}(\eta, b) \\
+            f_{a}(b, \mu) \\
+            f_{\mu}(b, \mu)
+        \end{bmatrix}
+        &=\begin{bmatrix}
+            Q_{\eta\eta} - \Gamma_{\eta} & Q_{\eta s} & & \\
+            -Q_{s\eta}^T & Q_{ss} - \Gamma_{s} & & \\
+             & & Q_{aa} - \Gamma_{a} & Q_{a\mu} \\
+             & & -Q_{a\mu}^T & Q_{\mu\mu} - \Gamma_{\mu}
+        \end{bmatrix}
+        \begin{bmatrix}
+            \nabla_{\eta}\imaginary(\eta | b) \\
+            \nabla_{s}\imaginary(b | \eta) \\
+            \nabla_{a}\imaginary(b|\mu) \\
+            \nabla_{\mu}\imaginary(\mu | b)
+        \end{bmatrix}
+        - \Lambda \\
+        \mathbf{J}(x) &= \Omega\mathbf{H} + \nabla\Omega \cdot \nabla\imaginary - \nabla \Lambda \\
+        \begin{bmatrix}
+            J_{\eta\eta} & J_{\eta s} & J_{\eta a} & J_{\eta\mu} \\
+            J_{s\eta} & J_{ss} & J_{sa} & J_{s\mu} \\
+            J_{a\eta} & J_{as} & J_{aa} & J_{a\mu} \\
+            J_{\mu\eta} & J_{\mu s} & J_{\mu a} & J_{\mu\mu}
+        \end{bmatrix}
+        &= \begin{bmatrix}
+            Q_{\eta\eta} - \Gamma_{\eta} & Q_{\eta s} \\
+            -Q_{s\eta}^T & Q_{ss} - \Gamma_{s} \\
+             & & Q_{aa} - \Gamma_{a} & Q_{a\mu} \\
+             & & -Q_{a\mu}^T & Q_{\mu\mu} - \Gamma_{\mu}
+        \end{bmatrix}
+         + \begin{bmatrix}
+            H_{\eta\eta} & H_{\eta s} & H_{\eta a} & H_{\eta\mu} \\
+            H_{s\eta} & H_{ss} & H_{sa} & H_{s\mu} \\
+            H_{a\eta} & H_{as} & H_{aa} & H_{a\mu} \\
+            H_{\mu\eta} & H_{\mu s} & H_{\mu a} & H_{\mu\mu}
+        \end{bmatrix}
+    \end{aligned}
+\end{equation}
 $$
-\mathbf{f}(x) = \Omega\nabla\mathcal{F} - A \\
-\begin{bmatrix} f_{\eta}(\eta, b) \\ f_{s}(\eta, b) \\ f_{a}(b, \mu) \\ f_{\mu}(b, \mu) \end{bmatrix} = \begin{bmatrix} Q_{\eta\eta} - \Gamma_{\eta} & Q_{\eta s} \\ -Q_{s\eta}^T & Q_{ss} - \Gamma_{s} \\ & Q_{aa} - \Gamma_{a} & Q_{a\mu} \\ & -Q_{a\mu}^T & Q_{\mu\mu} - \Gamma_{\mu} \end{bmatrix} \begin{bmatrix} \nabla_{\eta}\mathcal{F}(\eta | b) \\ \nabla_{s}\mathcal{F}(s | \eta) \\ \nabla_{a}\mathcal{F}(a | b, \mu) \\ \nabla_{\mu}\mathcal{F}(\mu | b) \end{bmatrix} - \Lambda \\
-\mathbf{J}(x) = \Omega\mathcal{H} + \nabla\Omega \cdot \nabla\mathcal{F} - \nabla A \\
-\begin{bmatrix} J_{\eta\eta} & J_{\eta s} & J_{\eta a} & J_{\eta\mu} \\ J_{s\eta} & J_{ss} & J_{sa} & J_{s\mu} \\ J_{a\eta} & J_{as} & J_{aa} & J_{a\mu} \\ J_{\mu\eta} & J_{\mu s} & J_{\mu a} & J_{\mu\mu} \end{bmatrix} = \begin{bmatrix} Q_{\eta\eta} - \Gamma_{\eta} & Q_{\eta s} \\ -Q_{s\eta}^T & Q_{ss} - \Gamma_{s} \\ & & Q_{aa} - \Gamma_{a} & Q_{a\mu} \\ & & -Q_{a\mu}^T & Q_{\mu\mu} - \Gamma_{\mu} \end{bmatrix} + \begin{bmatrix} H_{\eta\eta} & H_{\eta s} & H_{\eta a} & H_{\eta\mu} \\ H_{s\eta} & H_{ss} & H_{sa} & H_{s\mu} \\ H_{a\eta} & H_{as} & H_{aa} & H_{a\mu} \\ H_{\mu\eta} & H_{\mu s} & H_{\mu a} & H_{\mu\mu} \end{bmatrix} \\
-+ \nabla\Omega \cdot \nabla\mathcal{F} - \nabla A \\
++ \nabla\Omega \cdot \nabla\imaginary - \nabla A \\
 \nabla_{\eta}\Omega_{\alpha\alpha} = 0, \quad \nabla_{\mu}\Omega_{\beta\beta} = 0, \quad \nabla_{\eta}\Lambda_{\alpha} = 0, \quad \nabla_{\mu}\Lambda_{\beta} = 0 \quad \quad \quad (12)
 $$
 
