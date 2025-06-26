@@ -319,7 +319,7 @@
 \end{equation}
 \par
 実際には，これは，経路が中心多様体上にある自律モードとともに移動する参照フレームでの分解です．さらに，（時間変動する）自律モードの周りのテイラー展開を使用して，多様体外の流れを記述します．
-\begin{equation}
+\begin{equation}\label{off_manifold_flow}
     \begin{aligned}
         \dot{\varepsilon}(\tau) &= \dot{\alpha}(\tau) - \dot{\bm{\alpha}}(\tau) = f_\varepsilon\qty(0)+\frac{\partial f_\varepsilon}{\partial \varepsilon}\cdot\varepsilon+\ldots=\frac{\partial f_\alpha}{\partial \alpha} \cdot \varepsilon + \dots \\
         &\Rightarrow \\
@@ -338,5 +338,17 @@
 \end{equation}
 \par
 この表現は，自由エネルギーの精度部分と複雑度部分を分解します．ここで，精度部分は感覚状態に依存し，複雑度部分は自律状態のみに依存します．要するに，中心多様体上の流れは，事前の（ベイズ）信念に従いながら，その予測の精度を最大化しようとしているかのように見えます．ここでいう予測とは，変分密度によって与えられる外部状態に関する事後（ベイズ）信念の下での，期待される感覚状態を指します．
+\par
+\begin{figure}[htbp]
+   \centering
+   \includegraphics[scale=0.8]{Autonomous_flows_and_Bayesian_filters.png}
+   \caption{自律流とベイズフィルター}
+   \label{Autonomous_flows_and_Bayesian_filters}
+\end{figure}
+{
+    \footnotesize
+    \noindent
+    この図は,自律流の2つの成分を示しています．すなわち,（速い）流れ$\dot{\alpha}(\tau) - \dot{\bm{\alpha}}(\tau)$ は（中心）多様体から離れる流れであり,（遅い）流れ $\dot{\bm{\alpha}}(\tau)$ は多様体上での流れです．ここでの多様体は,感覚状態 $s(\tau)$ が与えられたときの自律モード $\bm{\alpha}(\tau)$ の集合であり,すべての時間 $\tau$ について式\eqref{variational_density}を参照してください．高速流と低速流への分解は,多様体を中心多様体と見なせることを意味します．左側のパネルは,多様体外への高速流の2つの成分,すなわち中心多様体に向かう流れと多様体と平行な流れを示しています式\eqref{off_manifold_flow}を参照．この分解は,多様体外の流れの一次テイラー展開に基づいています．右側のパネルは,自律モードの関数としての外部モード（同期多様体として知られる黒色の曲線）をプロットしています．ガウス分布（青色と赤色）は,感覚状態の変化による（外部および自律）条件付きモードの可能な変化を示しています．矢印は,この同期多様体の文脈における中心多様体流 $\dot{\bm{\alpha}}(\tau)$ を表し,接線ベクトルは可能な流れの方向を表しています．
+}
 
 \end{document}
